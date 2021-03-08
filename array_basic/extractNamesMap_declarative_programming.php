@@ -1,4 +1,6 @@
 <?php 
+
+# tasklist ---> file json
 $persons = array(
     array(
         'name' => 'Paolo',
@@ -19,7 +21,7 @@ $persons = array(
  * Esempi di stile dichiarativo
  */
 
-
+# criteria  taskName - contiene ->  $searchText
 /**
  * La funzione anonima viene assegnata alla variabile $filterMario
  */
