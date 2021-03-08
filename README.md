@@ -151,3 +151,13 @@ sostituisce il comando
 $ php -S localhost:6666  
 
 ```
+
+### Funzione di ordine superiore (higher order function)
+
+Un paio di articoli da leggere sulle **higher order function** in php
+
+Qui trovate un esempio con array_map al posto di array_filter
+
+[Su Medium](https://medium.com/@ozgur_ky/higher-order-functions-in-php-c9f311cf2994)
+
+[su phptherightway Functional programming](https://phptherightway.com/pages/Functional-Programming.html)
