@@ -139,9 +139,9 @@ in modo più semplice e ordinato l'esito dei test.
 ### Estensione di vscode che permette di lanciare il server di php
 
 
-![PHP Server icona](https://brapifra.gallerycdn.vsassets.io/extensions/brapifra/phpserver/3.0.1/1597700555261/Microsoft.VisualStudio.Services.Icons.Default)
+![PHP Server icona](https://brapifra.gallerycdn.vsassets.io/extensions/brapifra/phpserver/3.0.1/1597700555261/Microsoft.VisualStudio.Services.Icons.Default =150x)
 
-[PHP Server](https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver =250x)
+[PHP Server](https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver)
 
 
 sostituisce il comando 
