@@ -2,6 +2,7 @@
 
 // Carico le dipendenze
 require "./lib/JSONReader.php";
+require "./lib/searchFunctions.php";
 
 // Model  JSONReader (la parte che gestisce i dati )
 $taskList = JSONReader('./dataset/TaskList.json');
@@ -10,9 +11,15 @@ $taskList = JSONReader('./dataset/TaskList.json');
 if(isset($_GET['searchText']))
 {
     $searchText = trim(filter_var($_GET['searchText'], FILTER_SANITIZE_STRING));
+    $taskList = array_filter($taskList, searchText($searchText));
+    
 } else {
     $searchText = '';
 }
+
+
+
+
 
 ?>
 
