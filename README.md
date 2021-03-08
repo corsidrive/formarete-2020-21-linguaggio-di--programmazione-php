@@ -135,3 +135,18 @@ in modo più semplice e ordinato l'esito dei test.
 - [video youtube](https://www.youtube.com/watch?v=2Y9lu5rhwMQ)
 - [articolo online](https://www.forevolve.com/en/articles/2016/10/27/how-to-add-your-php-runtime-directory-to-your-windows-10-path-environment-variable/)
 
+
+### Estensione di vscode che permette di lanciare il server di php
+
+
+![PHP Server icona](https://brapifra.gallerycdn.vsassets.io/extensions/brapifra/phpserver/3.0.1/1597700555261/Microsoft.VisualStudio.Services.Icons.Default)
+[PHP Server](https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver)
+
+
+sostituisce il comando 
+
+```bash
+
+$ php -S localhost:6666  
+
+```
