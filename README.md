@@ -1,6 +1,8 @@
 # Modulo di PHP
 
-## Creazione del repository
+## Gestione del  repository
+
+### da locale a remoto
 
 Se avete un repository locale e lo volete collegare a un repostitory in remoto già esistente (github).
 
@@ -18,6 +20,15 @@ git branch -M main
 git push -u origin main
 
 ```
+
+### Clonare un repository da remoto a locale
+
+```bash
+git clone https://github.com/corsidrive/formarete-2020-21-linguaggio-di--programmazione-php.git
+
+```
+
+## PHP
 
 ### String
 
@@ -115,5 +126,12 @@ in modo più semplice e ordinato l'esito dei test.
 [assertEquals()](vendor/testTools/testTool.php)
 
 
-Modifica fatta da sarassoroberto
+## Lezione dell'8 marzo
+![mimosa](https://cdn.pixabay.com/photo/2017/11/22/17/18/mimosa-2970960_960_720.jpg)
+
+
+### php impostare le variabili ambiente
+
+- [video youtube](https://www.youtube.com/watch?v=2Y9lu5rhwMQ)
+- [articolo online](https://www.forevolve.com/en/articles/2016/10/27/how-to-add-your-php-runtime-directory-to-your-windows-10-path-environment-variable/)
 
