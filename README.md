@@ -140,7 +140,8 @@ in modo più semplice e ordinato l'esito dei test.
 
 
 ![PHP Server icona](https://brapifra.gallerycdn.vsassets.io/extensions/brapifra/phpserver/3.0.1/1597700555261/Microsoft.VisualStudio.Services.Icons.Default)
-[PHP Server](https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver)
+
+[PHP Server](https://marketplace.visualstudio.com/items?itemName=brapifra.phpserver =250x)
 
 
 sostituisce il comando 
