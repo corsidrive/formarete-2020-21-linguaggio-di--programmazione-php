@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * 1 
+ */
+
 print_r($_GET);
 
 // Carico le dipendenze
@@ -45,6 +49,9 @@ if(isset($_GET['searchText']) && trim($_GET['searchText']) !=='')
 
             <input type="radio" name="status" value="todo" id="todo">
             <label for="todo"> da fare </label>
+
+            <input type="radio" name="status" value="all" id="all">
+            <label for="all"> visualizza tutti </label>
         </div>
     </form>
     <ul>
