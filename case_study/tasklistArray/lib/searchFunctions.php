@@ -17,4 +17,13 @@ function searchText($searchText) {
     // return 10 ;
 }
 
+/**
+ * @var string $status è la stringa che corrisponde allo status da cercare
+ * (progress|done|todo)
+ * @return callback La funzione che verrà utilizzata da array_filter
+ */
+function searchStatus(string $status){
+    
+} 
+
 
