@@ -4,21 +4,17 @@
  * Programmazione Funzionale - dichiarativo 
  */
 function searchText($searchText) {
-
-    // $searchText : locale 
-    // per fare il modo che $searchText sia visibile (ambito) all'interno della funzione anonima
-    // devo usare "use"
+    // "Latte" // "php"
     return function ($taskItem) use ($searchText) {
-
-        //print_r($taskItem['taskName']);
-        //echo "sto cercando $searchText";
-
-        $result = strpos($taskItem['taskName'] ,$searchText) !== false;
-        return $result;
-        //var_dump($result);
-        //print_r($searchText);
-        //print_r($taskItem);
+            
+            // [0] => "prendere il latte" --> 12 != --> true
+            // [1] => "fare benzina" --> false  --> false !== false
+            // [2] => "latte per il viso" --> 0  !== falso ---> true
+            $result = strpos($taskItem['taskName'] ,$searchText) !== false;
+            return $result;
     };
     
     // return 10 ;
 }
+
+
