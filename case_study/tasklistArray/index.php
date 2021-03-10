@@ -8,7 +8,7 @@ require "./lib/searchFunctions.php";
 $taskList = JSONReader('./dataset/TaskList.json');
 // Controller $data = JSONReader()
 
-if(isset($_GET['searchText']))
+if(isset($_GET['searchText']) && trim($_GET['searchText']) !=='')
 {
     $searchText = trim(filter_var($_GET['searchText'], FILTER_SANITIZE_STRING));
     $taskList = array_filter($taskList, searchText($searchText));
@@ -16,9 +16,6 @@ if(isset($_GET['searchText']))
 } else {
     $searchText = '';
 }
-
-
-
 
 
 ?>
@@ -37,6 +34,7 @@ if(isset($_GET['searchText']))
     <form action="index.php">
         <input type="text" value="<?=  $searchText ?>" name="searchText" >
         <button type="submit">cerca</button>
+        
     </form>
     <ul>
         <?php 
