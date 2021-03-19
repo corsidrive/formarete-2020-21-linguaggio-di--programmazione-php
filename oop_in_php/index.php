@@ -4,7 +4,10 @@ require "./class/Task.php";
 
 $taskList = JSONReader('./dataset/TaskList.json');
 
+
+// imperativo
 $taskListObj = [];
+
 foreach ($taskList as $taskArray) {
 
         $taskObj = new Task();
@@ -12,9 +15,24 @@ foreach ($taskList as $taskArray) {
         $taskObj->taskName = $taskArray['taskName'];
         $taskObj->status = $taskArray['status'];
         $taskObj->expirationDate = $taskArray['expirationDate'];
-       
         $taskListObj[] = $taskObj;
 }
+
+// dichiarativo --> programmazione funzionale
+// somma(4,5) --> 9 funzione pura
+// ->isExpired() // nessuno
+
+$taskListObj  = array_map(function($taskArray){
+
+    $taskObj = new Task();
+    $taskObj->id = $taskArray['id'];
+    $taskObj->taskName = $taskArray['taskName'];
+    $taskObj->status = $taskArray['status'];
+    $taskObj->expirationDate = $taskArray['expirationDate'];
+    return $taskObj;
+                
+}, $taskList);
+
 
 ?>
 
@@ -38,8 +56,7 @@ foreach ($taskList as $taskArray) {
             <tr>
                 <td><?php echo $task->taskName ?></td>
                 <td><?= $task->isExpired() ? "si" : "no" ?></td>
-            </tr>
-            
+            </tr> 
     <?php } ?>
    
 </table>
