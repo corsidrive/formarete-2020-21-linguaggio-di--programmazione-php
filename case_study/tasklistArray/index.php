@@ -1,5 +1,11 @@
 <?php
 
+/**
+ * 1 
+ */
+
+print_r($_GET);
+
 // Carico le dipendenze
 require "./lib/JSONReader.php";
 require "./lib/searchFunctions.php";
@@ -8,7 +14,7 @@ require "./lib/searchFunctions.php";
 $taskList = JSONReader('./dataset/TaskList.json');
 // Controller $data = JSONReader()
 
-if(isset($_GET['searchText']))
+if(isset($_GET['searchText']) && trim($_GET['searchText']) !=='')
 {
     $searchText = trim(filter_var($_GET['searchText'], FILTER_SANITIZE_STRING));
     $taskList = array_filter($taskList, searchText($searchText));
@@ -16,9 +22,6 @@ if(isset($_GET['searchText']))
 } else {
     $searchText = '';
 }
-
-
-
 
 
 ?>
@@ -37,6 +40,19 @@ if(isset($_GET['searchText']))
     <form action="index.php">
         <input type="text" value="<?=  $searchText ?>" name="searchText" >
         <button type="submit">cerca</button>
+        <div id="status">
+            <input type="radio" name="status" value="progress" id="progress">
+            <label for="progress"> stai facendo </label>
+
+            <input type="radio" name="status" value="done" id="done">
+            <label for="done"> fatti </label>
+
+            <input type="radio" name="status" value="todo" id="todo">
+            <label for="todo"> da fare </label>
+
+            <input type="radio" name="status" value="all" id="all">
+            <label for="all"> visualizza tutti </label>
+        </div>
     </form>
     <ul>
         <?php 
