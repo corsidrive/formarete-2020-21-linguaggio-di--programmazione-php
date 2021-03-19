@@ -11,7 +11,7 @@ class Task {
     {
         // istanza della classe DateTime
         $today = new DateTime();
-        $task = new DateTime($this->expirationDate);   
+        $task = new DateTime($this->expirationDate); 
         
         return $task > $today; 
     }
