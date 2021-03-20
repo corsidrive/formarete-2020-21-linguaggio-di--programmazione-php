@@ -20,7 +20,7 @@ foreach ($taskList as $taskArray) {
 
 // dichiarativo --> programmazione funzionale
 // somma(4,5) --> 9 funzione pura
-// ->isExpired() // nessuno
+// ->isExpired() // il metodo che abbiamo implementato non darà sempre lo stesso risultato
 
 $taskListObj  = array_map(function($taskArray){
 
