@@ -9,12 +9,19 @@ $dataset = [
 ];
 
 foreach ($dataset as $testCase) {
-    // $inputDate = $testCase[0]  
-    // $expected = $testCase[1]  
-    // $description = $testCase[2]  
-    list($inputDate,$expected,$description) = $testCase;
+
+    $inputDate = $testCase[0];  
+    $expected = $testCase[1];  
+    $description = $testCase[2];  
+    //list($inputDate,$expected,$description) = $testCase;
    
     $task = new Task();
-       
+    $task->taskName = 'ciccio';
+    $task->expirationDate =  $inputDate;
+    $task->status = 'done';     
 
+    assertEquals($expected, $task->isExpired(), $description);
 }
+
+
+
