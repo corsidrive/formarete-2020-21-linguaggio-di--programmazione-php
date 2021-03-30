@@ -161,3 +161,30 @@ Qui trovate un esempio con array_map al posto di array_filter
 [Su Medium](https://medium.com/@ozgur_ky/higher-order-functions-in-php-c9f311cf2994)
 
 [su phptherightway Functional programming](https://phptherightway.com/pages/Functional-Programming.html)
+
+Programmazione funzionale 
+Funzione pura / Metodo puro
+
+somma(4,5) --> 9
+
+task con las tessa data di scadenza
+con la stessa data di scadeza 
+
+task->expirationDate = "2012-08-01"
+task->isExpired("2021-08-01")
+
+// Side effect
+task->expirationDate = "2012-08-01"
+task->isExpired() // now
+
+function xxx (){
+    $_GET['dati']
+    return yyy
+}
+
+// $_GET['dati'] ---> $dati = zzzz
+function xxx (dati){
+    ....
+    return yyy
+}
+
