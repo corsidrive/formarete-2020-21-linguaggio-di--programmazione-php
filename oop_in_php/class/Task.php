@@ -13,7 +13,12 @@ class Task {
         $today = new DateTime();
         $task = new DateTime($this->expirationDate); 
         
-        return $task > $today; 
+        // non è oggi
+        if($today->format('Ymd') === $task->format('Ymd')){
+            return false;
+        }
+        
+        return $today->getTimestamp() > $task->getTimestamp(); 
     }
 
     public function getExpirationDate()
