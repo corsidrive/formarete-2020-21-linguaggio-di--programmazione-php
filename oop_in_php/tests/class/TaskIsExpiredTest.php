@@ -9,23 +9,28 @@ $dataset = [
     ['1969-12-31','1970-01-01', true, 'task scaduta ieri'],
     ['1970-01-01','1970-01-01', false, 'task di oggi'],
     ['1970-01-02','1970-01-01', false,'task che scade domani'],
+    ['ciccio','ciccio', 'Exception','genera un eccezione'],
+    ['2021-13-03','pippo', 'Exception','genera un eccezione'],
 ];
 
 foreach ($dataset as $testCase) {
 
-    // list equivale a 
-    // $inputDate = $testCase[0];  
-    // $expected = $testCase[1];  
-    // $description = $testCase[2];  
-    
     list($inputDate, $today, $expected, $description) = $testCase;
    
     $task = new Task();
     $task->taskName = 'ciccio';
     $task->expirationDate =  $inputDate;
     $task->status = 'done';     
+    
+    try {
+        assertEquals($expected, $task->isExpired($today), $description);
+        assertEquals('boolean',gettype($expected),"il risultato deve essere un booleano $expected");
+    } catch (\Throwable $th) {
+        assertEquals('Exception', $expected, "Mi aspettavo un eccezione per formato errato che si è verificata");
+    }
 
-    assertEquals($expected, $task->isExpired($today), $description);
+   
+
 }
 
 
