@@ -6,3 +6,4 @@
       [opp_in_php].carousel-inner>.item$ php test/ciccioTest.php
 
 
+php tests\class\TaskIsExpiredTest.php
